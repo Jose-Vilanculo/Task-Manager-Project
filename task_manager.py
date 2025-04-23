@@ -317,9 +317,10 @@ def delete_task():
                 file.write(data[0])
                 for row in data[1:]:
                     file.write("\n" + row)
-                    print("Task deleted.")
+                print("Task deleted.")
         except FileNotFoundError:
             print("This file does not exist.")
+
     elif len(data) == 1:
         try:
             with open("tasks.txt", "w", encoding="utf-8", newline="") as file:
@@ -327,6 +328,7 @@ def delete_task():
                 print("Task deleted.")
         except FileNotFoundError:
             print("This file does not exist.")
+
     else:
         try:
             with open("tasks.txt", "w", encoding="utf-8", newline="") as file:
