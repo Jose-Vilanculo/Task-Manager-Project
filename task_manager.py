@@ -190,7 +190,7 @@ or enter -1 to return: '''))
             # Edit assigned user
             while True:
                 new_user = input("Enter new username (leave blank to keep current): ").strip()
-                if new_user in users:
+                if new_user in users or new_user == "":
                     break
                 else:
                     print("User not found. Try again")
